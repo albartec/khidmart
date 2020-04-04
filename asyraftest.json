@@ -1,15 +1,45 @@
 {
   "$jason": {
     "head": {
-      ...
-    },
-    "body": {
-      "header": {
-        "title": {
-          "type": "image"",
+      "title": "KhidMarT",
+      "description": "This is a marketplace platform which enable radius distance filtering and contact a seller externally, also publish a tender for all seller to offer best solutions or products",
+      "icon": "https://khidmart.com/wp-content/uploads/2020/04/no-khidmart.png",
+      "offline" : "true"
+            },
+      
+      "body": {
+               "header": {
+                      "title" : {
+                      "type": "image",
+                      "style": {
+                         "width": "94",
+                            "height": "27"
+                               },
           "url": "https://khidmart.com/wp-content/uploads/2020/04/no-oval.png",
-                },
-      ...
-    }
-  }
+          "href": {
+            "url": "https://www.khidmart.com",
+                                      "view": "web"
+                                       } 
+                      },
+                       "menu" : {
+                              "type": "image",
+                              "url": "https://khidmart.com/wp-content/uploads/2020/04/toppng.com-marketing-person-icon-marketing-executive-icon-913x971-1.png",
+                              "href": {
+                                      "url": "https://www.khidmart.com",
+                                      "view": "web"
+                                       }
+                              }
+                 
+               },
+                               "body": {
+                        "background": {
+                        "type": "html",
+                        "url": "https://www.khidmart.com",
+                        "action": {
+                             "type": "$default"
+                                  }          
+              }
+      }
+       }
+}
 }
