@@ -1,24 +1,40 @@
+  
 {
   "$jason": {
-"header": {
-  "title": {
-     "type": "image",
-     "url": "https://khidmart.com/wp-content/uploads/2020/04/no-oval.png",
-}
-},
-"background": {
-  "type": "html",
-  "url": "https://khidmart.com",
-  "action": {
-    "trigger": "navigate"  
-  }
-  },
-  "footer": {
-    "tabs": {
-      "items": [{
-        "image": "https://khidmart.com/wp-content/uploads/2020/04/no-khidmart.png"
-      }]
+    "head": {
+      "title": "Jasonette => Web Container $agent function call",
+      "description": "This example takes user input from native body.footer.input component and sends it to the web container, calling the qr code update function",
+      "actions": {
+        "qr": {
+          "type": "$agent.request",
+          "options": {
+            "id": "$webcontainer",
+            "method": "qr",
+            "params": ["{{$get.val}}"]
+          }
+        }
+      }
+    },
+    "body": {
+      "header": {
+        "title": "Generate QR Code"
+      },
+      "background": {
+        "type": "html",
+        "url": "https://khidmart.com"
+      },
+      "footer": {
+        "input": {
+          "textfield": {
+            "name": "val",
+            "placeholder": "Type something"
+          },
+          "right": {
+            "text": "Generate",
+            "action": { "trigger": "qr" }
+          }
+        }
+      }
     }
-  }
   }
 }
