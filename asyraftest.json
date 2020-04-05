@@ -1,6 +1,7 @@
- {"$jason": {
+{
+    "$jason": {
         "head": {
-            "title": "KhidMarT",
+            "title": "SFVM",
             "actions": {
                 "$foreground": {
                     "type": "$reload"
@@ -11,7 +12,7 @@
                         "url": [{
                             "{{#if $params && 'url' in $params}}": "{{$params.url}}"
                         }, {
-                            "{{#else}}": "https://www.khidmart.com=true"
+                            "{{#else}}": "https://khidmart.com"
                         }]
                     },
                     "success": {
@@ -41,4 +42,4 @@
             }
         }
     }
- }
+}
