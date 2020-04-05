@@ -31,11 +31,12 @@
                  
                },
                                "body": {
-                        "background": {
-        "type": "html",
-        "url": "https://www.khidmart.com"
-              }
+                        "background": {  
+                          "type": "html",  
+                          "url": "https://www.khidmart.com", 
+                          "action": {        "trigger": "visit"      }    
+                                                  } 
+                                                  }
       }
-       }
-}
+  }
 }
