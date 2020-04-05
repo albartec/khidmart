@@ -4,29 +4,8 @@
       "title": "KhidMarT",
       "description": "This is a marketplace platform which enable radius distance filtering and contact a seller externally, also publish a tender for all seller to offer best solutions or products",
       "icon": "https://khidmart.com/wp-content/uploads/2020/04/no-khidmart.png",
-      "offline" : "true",
-      "actions": {
-        "visit": [
-          {
-            "{{#if /\\/edit/.test($jason.url)}}": {
-              "type": "$href",
-              "options": {
-                "url": "{{$jason.url.replace('/edit', '')}}",
-                "preload": {
-                  "background": "#ffffff"
-                }
-              }
-            }
-          },
-          {
-            "{{#else}}": {
-              "type": "$default"
-            }
-          }
-        ]
-      }      
-      
-    },
+      "offline" : "true"
+                },
       
       "body": {
                "header": {
@@ -54,11 +33,8 @@
                                "body": {
                         "background": {
         "type": "html",
-        "url": "https://www.khidmart.com",
-        "action": {
-          "trigger": "visit"
-        }
-      }
+        "url": "https://www.khidmart.com"
+              }
       }
        }
 }
