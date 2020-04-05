@@ -1,42 +1,36 @@
 {
   "$jason": {
     "head": {
-      "title": "KhidMarT",
-      "description": "This is a marketplace platform which enable radius distance filtering and contact a seller externally, also publish a tender for all seller to offer best solutions or products",
-      "icon": "https://khidmart.com/wp-content/uploads/2020/04/no-khidmart.png",
-      "offline" : "true"
-                },
-      
-      "body": {
-               "header": {
-                      "title" : {
-                      "type": "image",
-                      "style": {
-                         "width": "94",
-                            "height": "27"
-                               },
-          "url": "https://khidmart.com/wp-content/uploads/2020/04/no-oval.png"
-                                },
-                       "menu" : {
-                              "type": "image",
-                              "style": {
-                         "width": "94",
-                            "height": "27"
-                               },
-                              "url": "https://khidmart.com/wp-content/uploads/2020/04/toppng.com-marketing-person-icon-marketing-executive-icon-913x971-1.png",
-                              "href": {
-                                      "url": "https://albartec.github.io/khidmart/asyraftest.json"
-                                       }
-                              }
-                 
-               },
-                               "body": {
-                        "background": {  
-                          "type": "html",  
-                          "url": "https://www.khidmart.com", 
-                          "action": {        "trigger": "visit"      }    
-                                                  } 
-                                                  }
+      "title": "Jasonbase",
+      "actions": {
+        "visit": [
+          {
+            "{{#if /\\/edit/.test($jason.url)}}": {
+              "type": "$href",
+              "options": {
+                "url": "{{$jason.url.replace('/edit', '')}}",
+                "preload": {
+                  "background": "#ffffff"
+                }
+              }
+            }
+          },
+          {
+            "{{#else}}": {
+              "type": "$default"
+            }
+          }
+        ]
       }
+    },
+    "body": {
+      "background": {
+        "type": "html",
+        "url": "https://www.khidmart.com",
+        "action": {
+          "trigger": "visit"
+        }
+      }
+    }
   }
 }
