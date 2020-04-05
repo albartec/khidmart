@@ -1,24 +1,44 @@
-{
-  "$jason": {
-    "head": {
-      "title": "KhidMarT",
-      "offline": "true/yes/on"
+ {"$jason": {
+        "head": {
+            "title": "KhidMarT",
+            "actions": {
+                "$foreground": {
+                    "type": "$reload"
                 },
-    "body": {
-      "header": {
-        "title" : {
-                      "type": "image",
-                      "style": {
-                         "width": "94",
-                            "height": "27"
-                               },
-          "url": "https://khidmart.com/wp-content/uploads/2020/04/no-oval.png"
-                                }},
-      "background": {
-        "type": "html",
-        "url": "https://www.khidmart.com",
-        "action": {"type": "$default"}
-              }
+                "$load": {
+                    "type": "$set",
+                    "options": {
+                        "url": [{
+                            "{{#if $params && 'url' in $params}}": "{{$params.url}}"
+                        }, {
+                            "{{#else}}": "https://www.khidmart.com?mobile-app-view=true"
+                        }]
+                    },
+                    "success": {
+                        "type": "$render"
+                    }
+                },
+                "navigate": {
+                    "type": "$href",
+                    "options": {
+                        "url": "https://albartec.github.io/khidmart/asyraftest.json",
+                        "options": {
+                            "url": "{{$jason.url}}"
+                        }
+                    }
+                }
+            },
+            "templates": {
+                "body": {
+                    "background": {
+                        "type": "html",
+                        "url": "{{$get.url}}",
+                        "action": {
+                            "trigger": "navigate"
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
-}
+ }
