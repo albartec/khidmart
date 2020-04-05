@@ -40,6 +40,10 @@
                                 },
                        "menu" : {
                               "type": "image",
+                              "style": {
+                         "width": "94",
+                            "height": "27"
+                               },
                               "url": "https://khidmart.com/wp-content/uploads/2020/04/toppng.com-marketing-person-icon-marketing-executive-icon-913x971-1.png",
                               "href": {
                                       "url": "https://albartec.github.io/khidmart/asyraftest.json"
