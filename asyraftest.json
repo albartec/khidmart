@@ -50,7 +50,7 @@
                                "body": {
                         "background": {
         "type": "html",
-        "url": "https://www.jasonbase.com",
+        "url": "https://www.khidmart.com",
         "action": {
           "trigger": "visit"
         }
