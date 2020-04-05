@@ -32,7 +32,7 @@
                             "height": "27"
                                },
           "url": "https://khidmart.com/wp-content/uploads/2020/04/no-oval.png"
-                                },
+                                }},
       "background": {
         "type": "html",
         "url": "https://www.khidmart.com",
@@ -40,7 +40,6 @@
           "trigger": "visit"
         }
       }
-     }
     }
   }
 }
