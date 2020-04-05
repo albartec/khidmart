@@ -1,47 +1,36 @@
 {
-    "$jason": {
-        "head": {
-            "title": "KhidMarT",
-            "actions": {
-                "$foreground": {
-                    "type": "$reload"
-                },
-                "$load": {
-                    "type": "$set",
-                    "options": {
-                        "url": [{
-                            "{{#if $params && 'url' in $params && String($params.url).includes('khidmart.com')}}": "{{$params.url}}?mobile-app-view=true"
-                        }, {
-                            "{{#elseif $params && 'url' in $params}}": "{{$params.url}}"
-                        }, {
-                            "{{#else}}": "https://www.khidmart.com?mobile-app-view=true"
-                        }]
-                    },
-                    "success": {
-                        "type": "$render"
-                    }
-                },
-                "navigate": {
-                    "type": "$href",
-                    "options": {
-                        "url": "https://albartec.github.io/khidmart/asyraftest.json",
-                        "options": {
-                            "url": "{{$jason.url}}"
-                        }
-                    }
+  "$jason": {
+    "head": {
+      "title": "KhidMarT",
+      "actions": {
+        "visit": [
+          {
+            "{{#if /\\/edit/.test($jason.url)}}": {
+              "type": "$href",
+              "options": {
+                "url": "{{$jason.url.replace('/edit', '')}}",
+                "preload": {
+                  "background": "#ffffff"
                 }
-            },
-            "templates": {
-                "body": {
-                    "background": {
-                        "type": "html",
-                        "url": "{{$get.url}}",
-                        "action": {
-                            "trigger": "navigate"
-                        }
-                    }
-                }
+              }
             }
+          },
+          {
+            "{{#else}}": {
+              "type": "$default"
+            }
+          }
+        ]
+      }
+    },
+    "body": {
+      "background": {
+        "type": "html",
+        "url": "https://www.khidmart.com",
+        "action": {
+          "trigger": "visit"
         }
+      }
     }
+  }
 }
