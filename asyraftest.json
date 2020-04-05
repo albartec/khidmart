@@ -2,26 +2,8 @@
   "$jason": {
     "head": {
       "title": "KhidMarT",
-            "actions": {
-        "visit": [
-          {
-            "{{#if /\\/edit/.test($jason.url)}}": {
-              "type": "$href",
-              "options": {
-                "url": "{{$jason.url.replace('/edit', '')}}",
-                "preload": {
-                  "background": "#ffffff"
-                }
-              }
-            }
-          },
-          {
-            "{{#else}}": {
-              "type": "$default"
-            }
-          }
-        ]
-      }
+      "offline": "true/yes/on",
+            
     },
     "body": {
       "header": {
@@ -36,10 +18,8 @@
       "background": {
         "type": "html",
         "url": "https://www.khidmart.com",
-        "action": {
-          "trigger": "navigate"
-        }
-      }
+        "action": {"type": "$default"}
+              }
     }
   }
 }
