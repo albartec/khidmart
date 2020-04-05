@@ -1,8 +1,8 @@
 {
   "$jason": {
     "head": {
-      "title": "Jasonbase",
-      "actions": {
+      "title": "KhidMarT",
+            "actions": {
         "visit": [
           {
             "{{#if /\\/edit/.test($jason.url)}}": {
@@ -24,6 +24,15 @@
       }
     },
     "body": {
+      "header": {
+        "title" : {
+                      "type": "image",
+                      "style": {
+                         "width": "94",
+                            "height": "27"
+                               },
+          "url": "https://khidmart.com/wp-content/uploads/2020/04/no-oval.png"
+                                },
       "background": {
         "type": "html",
         "url": "https://www.khidmart.com",
