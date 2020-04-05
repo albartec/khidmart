@@ -2,9 +2,8 @@
   "$jason": {
     "head": {
       "title": "KhidMarT",
-      "offline": "true/yes/on",
-            
-    },
+      "offline": "true/yes/on"
+                },
     "body": {
       "header": {
         "title" : {
