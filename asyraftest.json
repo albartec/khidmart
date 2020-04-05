@@ -11,7 +11,7 @@
                         "url": [{
                             "{{#if $params && 'url' in $params}}": "{{$params.url}}"
                         }, {
-                            "{{#else}}": "https://www.khidmart.com?mobile-app-view=true"
+                            "{{#else}}": "https://www.khidmart.com=true"
                         }]
                     },
                     "success": {
