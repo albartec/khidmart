@@ -11,10 +11,10 @@
                     "options": {
                         "url": [{
                             "{{#if $params && 'url' in $params && String($params.url).includes('khidmart.com')}}": "{{$params.url}}?mobile-app-view=true"
-                        },{
+                        }, {
                             "{{#elseif $params && 'url' in $params}}": "{{$params.url}}"
                         }, {
-                            "{{#else}}": "https://khidmart.com"
+                            "{{#else}}": "https://www.khidmart.com?mobile-app-view=true"
                         }]
                     },
                     "success": {
